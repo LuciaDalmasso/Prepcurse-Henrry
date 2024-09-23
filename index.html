@@ -1,26 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Mi página web</title>
+        <link rel="stylesheet" href="./estilos.css" />
+        <title>Mi página web</title>   
     </head>
     <body>
-         <h1>Mi página web</h1>
+         <h1>Resumen del prepcurse Henrry</h1>
                   <p>Mi nombre es Lucia .</p>
-    <h2>Titulo 1</h2>
-    <h2>Titulo 2</h2>
-    <h2>Titulo 3</h2>
-<hr>
-    <h3> Algunas definiciones </h3>
+                  
+    <h1> ¿Cómo crear mi página web? </h1>
 
-    <h4>  Etiquetas h</h4>
+    <h2> Empezando mi página web </h2>
 
-<p>Las etiquetas < h >  y < / h > nos permiten establecer títulos o secciones con mayor jerarquía en la web y estas van del 1 al 6</p>
+<p>Para comenzar, será necesario seguir una serie de pasos que nos van a brindar la base sobre la cual se va a apoyar todo el proyecto. Estos pasos incluyen desde la instalación de los programas que vamos a utilizar hasta los primeros caminos en la creación del código </p>
+        <h3> 1- Programas que vamos a utilizar </h3>
+        <ul>
+            <li>Visual Studio Code </li>
+            <li>Git Bash </li>
+        </ul>
+        <h3> 2- Repositorio remoto </h3>
+            <p>Git Hub (aquí debemos crear una cuenta) </p>
+
+        <h3> 3- Crear el entorno de trabajo</h3>
+    <p>En esta etapa es necesario crear la carpeta donde vamos a guardar todos los archivos relacionados al proyecto. Para esto, en nuestra pc vamos a crear una carpeta (ésta se puede hacer de forma manual en el entorno de Windows o bien, se puede crear utilizando código desde Vs code o git bash, para ello ver los primeros videos en el prep curse de Henrry). 
+    Esta carpeta que hemos creado puede ser utlizada de manera remota sin necesidad de enviar los archivos para su edición, y para ello es que sirve la cuenta en Git Hub, donde vamos a crear un nuevo repositorio y vamos a vincular nuestra carpeta desde nuestro almacenamiento local.
+    Para ello vamos a convertirla en repositorio utilizando el Vs code. Desde una nueva terminal vamos a vincular la carpeta con el repositorio remoto de Github con el siguiente esquema de código:</p>
+    <ol>
+        <li> cd (aquí se coloca la dirección o nombre de la carpeta donde vamos a trabajar para ingresar en ella) </li>
+        <li> Touch "nombre.html" (vamos a crear nuestro archivo html) </li>
+        <li> Git init (para convertir la carpeta creada en repositorio). 
+            En esta etapa ya se puede crear un commit, es decir una instantánea del estado en el cual se encuetra el proyecto hasta ese momento, utilizando el código git add "nombre del archivo" o git add . para hacerlo en todos los archivos de la carpeta
+            Luego se utiliza el código git commit -m y algun texto de referencia "entre comillas" </li>
+        <li> git remote add origin "direccion del repositorio remoto" (debemos copiar esta direción en la sección "code" del repositorio que creamos en Github)</li>
+        <li> git branch -m main</li>
+        <li> git push -u origin main</li>
+    </ol>
+<p> Con estos pasos ya tenemos nuestro archivo html creado y guardado en un repositorio que va llevar un seguimiento por parte de git, a demás lo vamos a poder guardar de manera remota en la cuenta de Github</p>
+
+        <h3> 4- Estructura de la página web </h3>       
+    <p>Abrir el Vs code, arrastramos la carpeta repositorio hacia el entorno de trabajo del vs y desde ahi ya podemos ver todos los archivos que contiene esta carpeta, que por el momento solo es el archivo html que creamos.</p> 
+    <p> Abrir el archivo html y en la columna central del vs code ya se puede comenzar a editar. Ahi mismo vamos a copiar la estructura base para nuestra web: </p>
+   <p> < !DOCTYPE html> </p>
+       <p> < html lang="es"> </p>
+            <p>     < head> </p>
+                 <p>         < title>Título</ title> </p>
+            <p>     < /head> </p>
+            <p>     < body> </p>
+                <p>          < h1>Título< /h1> </p>
+                    <p>               < p>Texto< /p> </p>
+            <p>     < /body> </p>
+        <p> < /html> </p>
    
-    <h4> Etiquetas p</h4>
+    <h2>  Etiquetas </h2>
+
+    <p>Dentro de este código madre vamos a poder darle forma a nuestra página web volcando toda la información y multimedia necesaria y para ello vamos a tener algunas herramientas que nos da vs code, una de ellas son las etiquetas. Cada etiqueta tiene una función específica con la que se puede programar el formato o uso de algun elemeto de la página web, ya sea para el título, párrafos de texto, listas de elementos, etc. </p>
+
+    <h2>  Etiquetas h </h2>
+    
+<p>Las etiquetas < h >  y < / h > nos permiten establecer títulos o secciones con mayor jerarquía en la web y estas van del 1 al 6</p>
+    
+    <h2> Etiquetas p</h2>
 
 <p> Mientras que las etiquetas < p > y < / p > nos permiten agregar párrafos de texto. La sintáxis correcta indica que los caracteres no deben estar separados, pero para poder ponerlo en exeplo se excribió de esta manera </p>
     
-    <h4> Etiquetas ol y li  </h4>
+    <h2> Etiquetas ol y li  </h2>
 
 <p> para crear un listado de elementos ORDENADOS, lo vemos a hacer con las etiquetas < ol > y < /ol > que son listas ordenadas, pero que a tu vez dentro llevan las etiquetas li que son list item</p>
 
@@ -30,9 +73,9 @@
     <li>item 3</li>
 </ol>
 
-<h4> Etiquetas ul y li  </h4>
+<h2> Etiquetas ul y li  </h2>
 
-<p> para crear un listado de elementos NO ORDENADOS, lo vemos a hacer con las etiquetas < ul > y < /ul > y como en la lista anterior, también se deben colocar los items con las etiquetas < li > y < /li > </p>
+<p> Mientras que, para crear un listado de elementos NO ORDENADOS, lo vamos a hacer con las etiquetas < ul > y < /ul > y como en la lista anterior, también se deben colocar los items con las etiquetas < li > y < /li > </p>
 
 <ul> 
     <li>Item 1</li>
@@ -40,20 +83,24 @@
     <li>item 3</li>
 </ul>
 
-<p> para separar secciones en el texto se pueden usar las etiquetas < hr > y se van a ver como en esta última sección </p>
+<h2> Separadores </h2>
+
+<p> Para separar secciones en el texto se pueden usar las etiquetas < hr > que van a crear separadores lineales </p>
 
 <hr>
 
-<h4> Etiquetas span </h4>
+<hr>
+
+<h2> Etiquetas span </h2>
+
 <p>Para colocar textos cortos y que queden uno al lado de otro se usan las etiquetas < span > y < /span > </p>
 
+<span> Por ejemplo: </span>
 <span> Home </span>
 <span> Noticias </span>
 <span> Clima </span>
 
-<br>
-
-<h5> LISTADO DE LAS ETIQUETAS MÁS UTILIZADAS </h5>
+<h2> LISTADO DE LAS ETIQUETAS MÁS UTILIZADAS </h2>
 <ul> 
     <li> < html>: Raíz de un documento HTML, engloba todo el contenido de la página. </li>
     <li> < head>: Contiene metadatos/información para el documento, como el titulo y enlaces a scripts y hojas de estilo.</li>
@@ -80,6 +127,17 @@
     <li> < meta>: Define metadatos que no pueden ser representados por otros elementos HTML. </li>
     <li> < script>: Se utiliza para insertar o hacer referencia a un script ejecutable. </li>
 </ul>
+
+<h1>Estilos CSS </h1>
+
+<p>Para darle estilo, color y mejorar la estetica de nuestra web es necesario utilizar el código CSS. Este código se va a trabajar en un archivo distinto a nuestro .html original y, por lo tanto, va a ser necesario vincular ambos archivos. A continuaión los pasos a seguir. </p>
+
+<ol>
+    <li> Desde la columna explorer en VS CODE vamos a crear un nuevo archivo, el cual llevará la extensión .CSS </li>
+    <li> Para vincularlo con nuestro .html, dentro de éste ultimo y a continuación de la etiqueta head de nuestro código base, se debe copiar el siguiente código: 
+        < link rel="stylesheet" href="./estilos.css" / > </li> </ol>
+
+<p> Con estos dos sencillos pasos, hemos vinculado nuestro código html con el css y de esta manera, todos los estilos que definamos en el archivo css serán aplicados en nuestra web </p>
 
     </body>
 </html>
